@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <div className="relative min-h-[90vh] flex items-center">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(var(--primary-rgb),0.08),transparent_50%)]" />
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         <div className="flex flex-col items-center text-center">
           <motion.div
@@ -56,14 +56,31 @@ export function Hero() {
                 Contact Me <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="rounded-full">
-              <Link href="https://github.com/Abusha-Ansari" target="_blank" rel="noopener noreferrer">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="rounded-full"
+            >
+              <Link
+                href="https://github.com/Abusha-Ansari"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Github className="mr-2 h-4 w-4" /> GitHub
               </Link>
             </Button>
-            <Button variant="ghost" size="lg" className="rounded-full">
-              <Download className="mr-2 h-4 w-4" /> Download Resume
-            </Button>
+            <a
+              href="https://rbwyllcbtgtflzovqdpr.supabase.co/storage/v1/object/public/pdfs/Abusha_Resume.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="ghost" size="lg" className="rounded-full">
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+              </Button>
+            </a>
           </motion.div>
         </div>
       </div>

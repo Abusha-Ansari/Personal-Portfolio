@@ -33,7 +33,7 @@ out/
 
 # Vercel
 .vercel/
-.bolt
+.bolt/
 
 # Miscellaneous
 .idea/

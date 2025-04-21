@@ -18,6 +18,7 @@ export interface Project {
   description: string;
   image: string;
   tags: string[];
+  srcCode: string;
   link: string;
   featured: boolean;
 }

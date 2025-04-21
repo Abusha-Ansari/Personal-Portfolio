@@ -52,7 +52,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         
         <CardFooter className="flex justify-between border-t pt-4">
           <Link
-            href={project.link}
+            href={project.srcCode}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-sm font-medium text-primary hover:underline"
