@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import clsx from "clsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={clsx(inter.className, "flex flex-col min-h-screen")}> {/* Added flex utilities for layout */}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -28,7 +29,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          {children}
+          <main className="flex-grow"> {/* Ensures main content takes available space */}
+            {children}
+          </main>
           <Footer />
           <Toaster />
         </ThemeProvider>
