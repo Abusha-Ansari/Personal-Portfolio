@@ -76,7 +76,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="ghost" size="lg" className="rounded-full">
+              <Button variant="outline" size="lg" className="rounded-full">
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </Button>

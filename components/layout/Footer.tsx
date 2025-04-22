@@ -123,7 +123,7 @@ export function Footer() {
                       href="mailto:abusha.ansari21@example.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      abusha.ansari21@gmail.com
+                      <p className="break-all">abusha.ansari21@gmail.com</p>
                     </a>
                   </li>
                 </ul>

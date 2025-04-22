@@ -30,7 +30,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           />
           {project.featured && (
             <div className="absolute top-2 right-2">
-              <Badge variant="default" className="bg-primary text-white">
+              <Badge variant="default" className="bg-primary text-white dark:text-black">
                 Featured
               </Badge>
             </div>
