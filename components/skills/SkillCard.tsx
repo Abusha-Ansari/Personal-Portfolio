@@ -17,15 +17,15 @@ export function SkillCard({ skill, index }: SkillCardProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.05 }}
     >
-      <Card className="h-full">
+      <Card className="h-full  hover:scale-200">
         <CardContent className="pt-6">
-          <div className="flex justify-between items-center mb-2">
+          <div className="flex justify-center items-center mb-2">
             <h3 className="font-medium">{skill.name}</h3>
-            <span className="text-sm text-muted-foreground">
+            {/* <span className="text-sm text-muted-foreground">
               {skill.level}%
-            </span>
+            </span> */}
           </div>
-          <Progress value={skill.level} className="h-2" />
+          {/* <Progress value={skill.level} className="h-2" /> */}
         </CardContent>
       </Card>
     </motion.div>

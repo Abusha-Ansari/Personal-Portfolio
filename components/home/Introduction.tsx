@@ -39,7 +39,7 @@ export function Introduction() {
           className="relative h-[450px] rounded-2xl overflow-hidden"
         >
           <Image
-            src="https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src="https://res.cloudinary.com/dhi6ul49y/image/upload/v1748359875/mqokdzh397fqyqfowuie.jpg"
             alt="Abusha Ansari portrait"
             fill
             className="object-cover"

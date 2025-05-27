@@ -19,7 +19,7 @@ export function Biography() {
         >
           <div className="relative h-[500px] rounded-2xl overflow-hidden">
             <Image
-              src="https://images.pexels.com/photos/5496461/pexels-photo-5496461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              src="https://res.cloudinary.com/dhi6ul49y/image/upload/v1748359875/mqokdzh397fqyqfowuie.jpg"
               alt="Professional portrait"
               fill
               className="object-cover"
