@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Download, Github } from "lucide-react";
+import { ArrowRight, Download, Github, View } from "lucide-react";
 
 export function Hero() {
   return (
@@ -71,14 +71,14 @@ export function Hero() {
               </Link>
             </Button>
             <a
-              href="https://rbwyllcbtgtflzovqdpr.supabase.co/storage/v1/object/public/pdfs/Abusha_Resume.pdf"
-              download
+              href="./Abusha_Resume.pdf"
+              // download
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button variant="outline" size="lg" className="rounded-full">
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
+                <View className="mr-2 h-4 w-4" />
+                View Resume
               </Button>
             </a>
           </motion.div>

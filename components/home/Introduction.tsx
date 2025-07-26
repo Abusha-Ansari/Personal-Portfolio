@@ -54,7 +54,7 @@ export function Introduction() {
               With over 2 years of experience in software development, I specialize in building modern web applications using React, TypeScript, and Next.js. My passion lies in creating intuitive, performant, and accessible user interfaces that solve real-world problems.
             </p>
             <p className="text-muted-foreground">
-            I’m currently a Technical Team Member at CSI PCE — the Computer Society of India and the largest student body in the Mumbai chapter — where I lead the organization of various technical events. I’m passionate about writing clean code, crafting intuitive user experiences, and staying up-to-date with the latest technologies.
+            I’m currently a Technical Team Member at CSI PCE the Computer Society of India and the largest student body in the Mumbai chapter where I lead the organization of various technical events. I’m passionate about writing clean code, crafting intuitive user experiences, and staying up to date with the latest technologies.
             </p>
           </motion.div>
 
