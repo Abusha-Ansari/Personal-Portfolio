@@ -73,7 +73,7 @@ export function Biography() {
             </p> */}
             
             <p>
-              I’m a Technical Team Member at CSI PCE the Computer Society of India, and the largest student body in the Mumbai chapter.
+              I’m Joint Technical Head of CSI PCE the Computer Society of India, and the largest student body in the Mumbai chapter.
             </p>
             
             <p>
