@@ -11,9 +11,11 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-primary': 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%)',
+        'glass': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
+        'glass-dark': 'linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1))',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -115,13 +117,6 @@ const config: Config = {
         'float-slow': 'float 6s ease-in-out infinite',
         'gradient': 'gradient 8s ease infinite',
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gradient-primary': 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%)',
-        'glass': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
-        'glass-dark': 'linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1))',
-      },
       boxShadow: {
         'glow': '0 0 15px rgba(99, 102, 241, 0.5)',
         'glow-lg': '0 0 30px rgba(99, 102, 241, 0.6)',
@@ -152,3 +147,6 @@ const config: Config = {
   plugins: [require('tailwindcss-animate')],
 };
 export default config;
+
+
+
