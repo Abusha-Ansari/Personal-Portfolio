@@ -53,20 +53,51 @@ export function ContactForm() {
   });
 
   // Form submission handler
-  const onSubmit = async (data: FormValues) => {
-    setIsSubmitting(true);
+const onSubmit = async (data: FormValues) => {
+  setIsSubmitting(true);
+
+  try {
+    // console.log("Form data:", data);
+    const res = await fetch("/api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        to: "msaif8747@gmail.com",   // your inbox
+        subject: data.subject,
+        bodyMessage: data.message,
+        from: data.email,
+      }),
+    });
     
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    form.reset();
-    
+
+    if (!res.ok) {
+      throw new Error(`Failed to send message: ${res.status}`);
+    }
+
+    const result = await res.json();
+    console.log("Mail API response:", result);
+
     toast({
-      title: "Message sent",
+      title: "Message sent ✅",
       description: "Thank you for contacting me. I'll get back to you soon!",
     });
-  };
+
+    form.reset();
+  } catch (err: any) {
+    console.error("Mail API error:", err);
+
+    toast({
+      title: "Message failed ❌",
+      description: "Something went wrong. Please try again later.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   return (
     <motion.div
