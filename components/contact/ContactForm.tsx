@@ -129,7 +129,7 @@ const onSubmit = async (data: FormValues) => {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="john@example.com" type="email" {...field} />
+                  <Input placeholder="Enter your email" type="email" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
