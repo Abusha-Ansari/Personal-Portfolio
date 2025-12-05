@@ -37,7 +37,7 @@ The ecosystem is constantly evolving. From React and Next.js to Tailwind CSS and
 
 Frontend development is not just about making things look pretty; it's about creating intuitive, performant, and accessible experiences for users. That's why I love it.
     `,
-    publishedAt: "2023-10-15",
+    publishedAt: "2025-10-15",
     readingTime: "3 min read",
     tags: ["Frontend", "Web Development", "Personal"],
     coverImage: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1000&auto=format&fit=crop",
@@ -78,7 +78,7 @@ For example, a \`useWindowSize\` hook can be used across multiple components to 
 
 Hooks make our code more readable, reusable, and easier to test. If you haven't fully embraced them yet, now is the time.
     `,
-    publishedAt: "2023-11-02",
+    publishedAt: "2025-11-02",
     readingTime: "5 min read",
     tags: ["React", "JavaScript", "Coding"],
     coverImage: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1000&auto=format&fit=crop",
@@ -109,7 +109,7 @@ There are also valid concerns about copyright, security, and the potential for A
 
 AI is a powerful tool in our arsenal. By embracing it responsibly, we can become more efficient and effective developers.
     `,
-    publishedAt: "2023-12-10",
+    publishedAt: "2025-12-10",
     readingTime: "4 min read",
     tags: ["AI", "Technology", "Future"],
     coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop",

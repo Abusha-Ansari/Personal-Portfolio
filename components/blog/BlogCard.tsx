@@ -44,7 +44,14 @@ export function BlogCard({ post }: BlogCardProps) {
                 <div className="flex items-center gap-4 text-xs text-muted-foreground w-full">
                     <div className="flex items-center gap-1">
                         <Calendar className="h-3 w-3" />
-                        <span>{new Date(post.publishedAt).toLocaleDateString()}</span>
+                        <span>
+  {new Date(post.publishedAt).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  })}
+</span>
+
                     </div>
                     <div className="flex items-center gap-1">
                         <Clock className="h-3 w-3" />
