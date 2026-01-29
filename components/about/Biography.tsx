@@ -19,8 +19,8 @@ export function Biography() {
         >
           <div className="relative h-[500px] rounded-2xl overflow-hidden">
             <Image
-              src="https://res.cloudinary.com/dhi6ul49y/image/upload/v1748359875/mqokdzh397fqyqfowuie.jpg"
-              alt="Professional portrait"
+              src="/images/abusha-image.jpg"
+              alt="Abusha Ansari"
               fill
               className="object-cover"
             />

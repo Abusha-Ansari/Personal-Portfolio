@@ -36,13 +36,15 @@ export function Introduction() {
         {/* Image Section */}
         <motion.div
           variants={itemVariants}
-          className="relative h-[450px] rounded-2xl overflow-hidden"
+          className="relative rounded-2xl"
         >
           <Image
-            src="https://res.cloudinary.com/dhi6ul49y/image/upload/v1748359875/mqokdzh397fqyqfowuie.jpg"
+            src="/images/abusha-image.jpg"
             alt="Abusha Ansari portrait"
-            fill
-            className="object-cover"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto rounded-2xl"
           />
         </motion.div>
 
@@ -54,7 +56,7 @@ export function Introduction() {
               With over 2 years of experience in software development, I specialize in building modern web applications using React, TypeScript, and Next.js. My passion lies in creating intuitive, performant, and accessible user interfaces that solve real-world problems.
             </p>
             <p className="text-muted-foreground">
-            I’m currently Joint Technical Head of CSI PCE the Computer Society of India and the largest student body in the Mumbai chapter where I lead the organization of various technical events. I’m passionate about writing clean code, crafting intuitive user experiences, and staying up to date with the latest technologies.
+              I’m currently Joint Technical Head of CSI PCE the Computer Society of India and the largest student body in the Mumbai chapter where I lead the organization of various technical events. I’m passionate about writing clean code, crafting intuitive user experiences, and staying up to date with the latest technologies.
             </p>
           </motion.div>
 
