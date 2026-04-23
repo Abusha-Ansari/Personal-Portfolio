@@ -53,29 +53,79 @@ export default async function BlogDetailPage({ params }: PageProps) {
         notFound();
     }
 
-    // Simple Markdown-like rendering helper
+    // Enhanced Markdown-like rendering helper
+    const renderInline = (text: string) => {
+        // Very basic inline parsing for bold and inline code
+        const parts = text.split(/(\*\*.*?\*\*|`.*?`)/g);
+        return parts.map((part, i) => {
+            if (part.startsWith('**') && part.endsWith('**')) {
+                return <strong key={i} className="font-bold text-foreground">{part.slice(2, -2)}</strong>;
+            }
+            if (part.startsWith('`') && part.endsWith('`')) {
+                return <code key={i} className="bg-muted px-1.5 py-0.5 rounded font-mono text-sm border border-border/50">{part.slice(1, -1)}</code>;
+            }
+            return part;
+        });
+    };
+
     const renderContent = (content: string) => {
-        return content.split("\n").map((line, index) => {
+        const lines = content.trim().split("\n");
+        const renderedElements: React.ReactNode[] = [];
+        let currentCodeBlock: string[] = [];
+        let inCodeBlock = false;
+
+        lines.forEach((line, index) => {
+            // Handle code blocks
+            if (line.trim().startsWith("```")) {
+                if (inCodeBlock) {
+                    renderedElements.push(
+                        <pre key={`code-${index}`} className="bg-muted/50 p-4 rounded-lg overflow-x-auto my-6 font-mono text-sm border border-border/50">
+                            <code>{currentCodeBlock.join("\n")}</code>
+                        </pre>
+                    );
+                    currentCodeBlock = [];
+                    inCodeBlock = false;
+                } else {
+                    inCodeBlock = true;
+                }
+                return;
+            }
+
+            if (inCodeBlock) {
+                currentCodeBlock.push(line);
+                return;
+            }
+
+            // Headings
             if (line.startsWith("## ")) {
-                return <h2 key={index} className="text-2xl font-bold mt-8 mb-4">{line.replace("## ", "")}</h2>;
+                renderedElements.push(<h2 key={index} className="text-2xl font-bold mt-10 mb-4 text-foreground">{line.replace("## ", "")}</h2>);
+                return;
             }
             if (line.startsWith("### ")) {
-                return <h3 key={index} className="text-xl font-semibold mt-6 mb-3">{line.replace("### ", "")}</h3>;
+                renderedElements.push(<h3 key={index} className="text-xl font-semibold mt-8 mb-3 text-foreground">{line.replace("### ", "")}</h3>);
+                return;
             }
-            if (line.startsWith("```")) {
-                // Very basic code block handling - just hiding the backticks for now or rendering as pre
-                if (line.length > 3) return null; // Skip start/end lines of code blocks for simplicity in this basic parser
-                return null;
-            }
-            // Handle code blocks content (this is a very naive parser, but sufficient for the mock data)
-            // A better approach for a real app would be a library, but we are avoiding deps.
 
+            // Lists
+            if (line.trim().startsWith("- ")) {
+                renderedElements.push(
+                    <li key={index} className="ml-6 mb-2 list-disc text-muted-foreground">
+                        {renderInline(line.trim().replace("- ", ""))}
+                    </li>
+                );
+                return;
+            }
+
+            // Empty lines / Paragraphs
             if (line.trim() === "") {
-                return <br key={index} />;
+                renderedElements.push(<div key={index} className="h-4" />);
+                return;
             }
 
-            return <p key={index} className="leading-7 mb-4 text-muted-foreground">{line}</p>;
+            renderedElements.push(<p key={index} className="leading-7 mb-4 text-muted-foreground/90">{renderInline(line)}</p>);
         });
+
+        return renderedElements;
     };
 
     return (
@@ -131,15 +181,8 @@ export default async function BlogDetailPage({ params }: PageProps) {
 
                 <BlogAudioPlayer slug={post.slug} />
 
-                <div className="prose prose-lg dark:prose-invert max-w-none">
-                    {/* 
-            In a real app, use a proper markdown parser like react-markdown.
-            For this task without adding deps, we render the text with basic handling.
-          */}
-                    <div className="whitespace-pre-wrap font-sans text-foreground/90">
-                        {/* We are using whitespace-pre-wrap to preserve formatting from the mock data string */}
-                        {post.content}
-                    </div>
+                <div className="prose prose-lg dark:prose-invert max-w-none mt-12">
+                    {renderContent(post.content)}
                 </div>
             </article>
         </div>
