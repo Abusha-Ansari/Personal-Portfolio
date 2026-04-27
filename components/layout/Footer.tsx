@@ -53,10 +53,10 @@ export function Footer() {
         >
           {/* Left Section */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-xl font-semibold">Portfolio</h3>
+            <h3 className="text-xl font-semibold font-mono">Abusha.dev</h3>
             <p className="text-muted-foreground max-w-md">
-              A passionate developer building innovative solutions with modern
-              technologies. Let's work together to bring your ideas to life.
+              Backend developer specializing in APIs, databases, and scalable
+              server-side architecture. Let's build reliable systems together.
             </p>
             <div className="flex space-x-4 pt-2">
               {SOCIAL_LINKS.map((social) => (
@@ -136,7 +136,7 @@ export function Footer() {
           variants={itemVariants}
           className="pt-8 mt-8 border-t border-border text-center text-muted-foreground text-sm"
         >
-          © {currentYear} Portfolio. All rights reserved.
+          © {currentYear} Abusha Ansari. All rights reserved.
         </motion.div>
       </div>
     </footer>

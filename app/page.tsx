@@ -2,9 +2,11 @@
 
 import { Hero } from "@/components/home/Hero";
 import { Introduction } from "@/components/home/Introduction";
+import { TechStack } from "@/components/home/TechStack";
+import { Architecture } from "@/components/home/Architecture";
+import { GitHubStats } from "@/components/home/GitHubStats";
 import { ProjectGrid } from "@/components/projects/ProjectGrid";
-import { SkillGrid } from "@/components/skills/SkillGrid";
-import { PROJECTS, SKILLS } from "@/lib/constants";
+import { PROJECTS } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/Container";
 import Link from "next/link";
@@ -19,6 +21,12 @@ export default function Home() {
       {/* Introduction Section */}
       <Introduction />
 
+      {/* Tech Stack Section */}
+      <TechStack />
+
+      {/* Architecture / System Design Section */}
+      <Architecture />
+
       {/* Featured Projects Section */}
       <section className="bg-muted/30 py-24">
         <ProjectGrid projects={PROJECTS.filter(project => project.featured)} />
@@ -31,16 +39,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <SkillGrid skillCategories={SKILLS} />
+      {/* GitHub Stats Section */}
+      <GitHubStats />
 
       {/* Contact CTA Section */}
       <section className="bg-primary/5 py-20">
         <Container>
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Let's Work Together</h2>
+            <h2 className="text-3xl font-bold mb-4">Let's Build Something Together</h2>
             <p className="text-muted-foreground mb-8">
-              Interested in working together? Let's discuss your project and see how I can help bring your ideas to life.
+              Need a scalable backend, a well-designed API, or help architecting your system? Let's discuss your project and see how I can help.
             </p>
             <Button asChild size="lg" className="rounded-full">
               <Link href="/contact">

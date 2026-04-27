@@ -1,17 +1,18 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import clsx from "clsx";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Abusha Ansari | Software Developer",
-  description: "Personal portfolio showcasing my projects and skills as a software developer",
+  title: "Abusha Ansari | Backend Developer",
+  description: "Backend developer specializing in API design, database architecture, and scalable server-side solutions. Experienced with Node.js, Express, PostgreSQL, MongoDB, and cloud infrastructure.",
 };
 
 export default function RootLayout({
@@ -21,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={clsx(inter.className, "flex flex-col min-h-screen")}> {/* Added flex utilities for layout */}
+      <body className={clsx(inter.className, jetbrainsMono.variable, "flex flex-col min-h-screen")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -29,7 +30,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="flex-grow"> {/* Ensures main content takes available space */}
+          <main className="flex-grow">
             {children}
           </main>
           <Footer />

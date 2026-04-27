@@ -4,9 +4,18 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
 import { SKILLS } from "@/lib/constants";
+import { Server, Database, Cloud, Code2 } from "lucide-react";
+
+const categoryIcons: Record<string, React.ReactNode> = {
+  "Backend & APIs": <Server className="h-4 w-4" />,
+  "Databases": <Database className="h-4 w-4" />,
+  "DevOps & Cloud": <Cloud className="h-4 w-4" />,
+  "Frontend": <Code2 className="h-4 w-4" />,
+};
 
 export function Introduction() {
-  const skills = SKILLS.flatMap((category) => category.items.map((item) => item.name)).slice(0, 8);
+  // Prioritize backend skills
+  const skills = SKILLS.slice(0, 3).flatMap((category) => category.items.map((item) => item.name)).slice(0, 10);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -53,23 +62,37 @@ export function Introduction() {
           <motion.div variants={itemVariants}>
             <h2 className="text-3xl font-bold mb-4">About Me</h2>
             <p className="text-muted-foreground mb-6">
-              With over 2 years of experience in software development, I specialize in building modern web applications using React, TypeScript, and Next.js. My passion lies in creating intuitive, performant, and accessible user interfaces that solve real-world problems.
+              With over 2 years of experience in software development, I specialize in building robust backend systems, RESTful APIs, and database architectures. My focus is on writing clean, scalable server-side code that powers reliable applications.
             </p>
             <p className="text-muted-foreground">
-              I’m currently Joint Technical Head of CSI PCE the Computer Society of India and the largest student body in the Mumbai chapter where I lead the organization of various technical events. I’m passionate about writing clean code, crafting intuitive user experiences, and staying up to date with the latest technologies.
+              I'm currently Joint Technical Head of CSI PCE — the Computer Society of India and the largest student body in the Mumbai chapter — where I lead the organization of technical events. I'm passionate about system design, API architecture, and building infrastructure that scales.
             </p>
           </motion.div>
 
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-xl font-semibold">Technical Skills</h3>
+            <h3 className="text-xl font-semibold">Core Technologies</h3>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full"
+                  className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-mono"
                 >
                   {skill}
                 </span>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div variants={itemVariants}>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {SKILLS.map((category) => (
+                <div
+                  key={category.category}
+                  className="flex items-center gap-2 text-sm text-muted-foreground bg-muted/50 rounded-lg px-3 py-2"
+                >
+                  {categoryIcons[category.category]}
+                  <span className="truncate">{category.category}</span>
+                </div>
               ))}
             </div>
           </motion.div>

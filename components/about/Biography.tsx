@@ -61,27 +61,23 @@ export function Biography() {
           
           <div className="space-y-4 text-muted-foreground">
             <p>
-              Hello! I'm Abusha Ansari, a passionate software developer with over 2 years of experience in creating web applications and digital experiences that users love.
+              Hello! I'm Abusha Ansari, a backend-focused developer with over 2 years of experience in building server-side applications, APIs, and database systems that power real-world products.
             </p>
             
             <p>
-              My journey in tech began during my undergraduate studies at Pillai College of Engineering, where I discovered my passion for creating elegant solutions to complex problems. Since then, I've worked with various technologies and frameworks, always seeking to expand my knowledge and skills.
-            </p>
-            
-            {/* <p>
-              After completing my Master's degree at Stanford University, I joined StartUp Ventures in New York as a Software Engineer. There, I honed my skills in full-stack development, working on a financial technology platform that served thousands of users.
-            </p> */}
-            
-            <p>
-              I’m Joint Technical Head of CSI PCE the Computer Society of India, and the largest student body in the Mumbai chapter.
+              My journey in tech began during my undergraduate studies at Pillai College of Engineering, where I discovered my passion for system design and building the infrastructure that powers applications. Since then, I've dived deep into Node.js, Express, PostgreSQL, MongoDB, and cloud services.
             </p>
             
             <p>
-              My technical expertise includes React, TypeScript, Next.js, Node.js, and various other modern web technologies. I'm passionate about clean code, user experience, and staying updated with the latest industry trends.
+              I'm Joint Technical Head of CSI PCE — the Computer Society of India, and the largest student body in the Mumbai chapter. This role has sharpened my ability to architect technical solutions and lead development teams.
             </p>
             
             <p>
-              When I'm not coding, you can find me chilling with my friends, reading science fiction, or experimenting with new recipes in the kitchen.
+              My technical expertise includes designing RESTful APIs, database schema architecture, GraphQL, real-time communication with Socket.io and WebRTC, and deploying with Docker and cloud infrastructure. I believe the best backend code is the code that's reliable, well-tested, and invisible to the end user.
+            </p>
+            
+            <p>
+              When I'm not coding, you can find me chilling with my friends, reading about distributed systems, or experimenting with new recipes in the kitchen.
             </p>
           </div>
         </motion.div>

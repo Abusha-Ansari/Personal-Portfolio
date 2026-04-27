@@ -21,6 +21,7 @@ export interface Project {
   srcCode: string;
   link: string;
   featured: boolean;
+  projectType: "backend" | "full-stack";
 }
 
 // Skill type
@@ -52,4 +53,21 @@ export interface ContactFormValues {
   email: string;
   subject: string;
   message: string;
+}
+
+// Architecture concept type
+export interface ArchitectureConcept {
+  id: string;
+  title: string;
+  description: string;
+  diagram: string;
+}
+
+// GitHub stats type
+export interface GitHubStats {
+  publicRepos: number;
+  followers: number;
+  following: number;
+  totalStars: number;
+  topLanguages: { name: string; percentage: number }[];
 }

@@ -42,8 +42,8 @@ export default function ContactPage() {
             <div>
               <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
               <p className="text-muted-foreground max-w-md">
-                Want to work together or have a question? Feel free to reach out
-                using the contact form or through any of the methods below.
+                Need a robust backend, a well-designed API, or help scaling your system?
+                Feel free to reach out using the contact form or through any of the methods below.
               </p>
             </div>
 
@@ -79,7 +79,8 @@ export default function ContactPage() {
               </h2>
               <p className="text-muted-foreground">
                 I typically respond to inquiries within 24-48 hours. I'm
-                currently available for freelance work and new opportunities.
+                currently available for backend development, API consulting, and
+                full-stack projects.
               </p>
             </div>
           </motion.div>
