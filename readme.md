@@ -11,7 +11,7 @@ This is a personal portfolio project built using **Next.js** and **Tailwind CSS*
 - **Project Showcase**: Displays projects with descriptions and links.
 
 ## Project Structure
-
+ 
 The project is organized as follows:
 
 ```
