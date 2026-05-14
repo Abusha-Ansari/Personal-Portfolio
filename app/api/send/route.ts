@@ -5,7 +5,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const res = await fetch("https://mailassist.abusha.tech/api/send", {
+    const res = await fetch("https://mailassist.abusha.in/api/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
