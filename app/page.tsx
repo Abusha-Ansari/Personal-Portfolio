@@ -3,10 +3,11 @@
 import { Hero } from "@/components/home/Hero";
 import { Introduction } from "@/components/home/Introduction";
 import { TechStack } from "@/components/home/TechStack";
+import { ExperienceSection } from "@/components/home/ExperienceSection";
 import { Architecture } from "@/components/home/Architecture";
 import { GitHubStats } from "@/components/home/GitHubStats";
 import { ProjectGrid } from "@/components/projects/ProjectGrid";
-import { PROJECTS } from "@/lib/constants";
+import { PROJECTS, EXPERIENCE } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/Container";
 import Link from "next/link";
@@ -23,6 +24,11 @@ export default function Home() {
 
       {/* Tech Stack Section */}
       <TechStack />
+
+      {/* Experience Section */}
+      <section className="bg-muted/30">
+        <ExperienceSection experiences={EXPERIENCE} />
+      </section>
 
       {/* Architecture / System Design Section */}
       <Architecture />

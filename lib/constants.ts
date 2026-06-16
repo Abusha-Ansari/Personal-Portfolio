@@ -3,6 +3,7 @@ export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
+  { label: "Experience", href: "/experience" },
   { label: "Blogs", href: "/blogs" },
   { label: "Contact", href: "/contact" },
 ];
@@ -190,3 +191,101 @@ export const ARCHITECTURE_CONCEPTS = [
     S2 --> Cache`,
   },
 ];
+
+// Experience data — freelance, internship, and college project involvement
+export const EXPERIENCE = [
+  // ── Freelance ──────────────────────────────────────────────────────────────
+  {
+    id: "fl-1",
+    role: "Freelance Full-Stack Developer",
+    company: "Independent Client — E-Commerce Platform",
+    type: "freelance" as const,
+    duration: "Oct 2024 – Jan 2025",
+    location: "Remote",
+    description:
+      "Designed and delivered a complete multi-vendor e-commerce backend for an independent client. Handled everything from initial schema design to deployment, including product catalog APIs, order workflows, and Stripe payment integration.",
+    highlights: [
+      "Built a RESTful API handling 10+ resource types with full CRUD and role-based access control",
+      "Integrated Stripe Checkout and webhook handling for order fulfilment automation",
+      "Modelled a PostgreSQL schema with 15+ relational tables, optimised with composite indices",
+      "Deployed on Railway with auto-deploy pipelines from GitHub",
+    ],
+    techStack: ["Node.js", "Express", "PostgreSQL", "Supabase", "Stripe API", "TypeScript", "Docker"],
+    link: "",
+  },
+  {
+    id: "fl-2",
+    role: "Freelance Backend Developer",
+    company: "Independent Client — SaaS Dashboard",
+    type: "freelance" as const,
+    duration: "Mar 2025 – May 2025",
+    location: "Remote",
+    description:
+      "Built the backend API and real-time notification layer for a SaaS analytics dashboard. Implemented WebSocket-based live updates, JWT authentication, and a tenant-aware data model.",
+    highlights: [
+      "Architected a multi-tenant data model ensuring strict data isolation between tenants",
+      "Implemented Socket.io rooms for per-tenant live analytics pushes",
+      "Designed a JWT + refresh-token auth flow with Redis-backed session blacklisting",
+      "Wrote OpenAPI 3.0 documentation for all 30+ endpoints",
+    ],
+    techStack: ["Node.js", "Express", "MongoDB", "Redis", "Socket.io", "JWT", "TypeScript"],
+    link: "",
+  },
+  // ── Internship ─────────────────────────────────────────────────────────────
+  {
+    id: "intern-1",
+    role: "Backend Developer Intern",
+    company: "TechVenture Startup (Mumbai)",
+    type: "internship" as const,
+    duration: "Jun 2024 – Sep 2024",
+    location: "Mumbai, India (Hybrid)",
+    description:
+      "Joined a three-person engineering team at an early-stage startup to build backend infrastructure for their B2B SaaS product. Owned the API layer and database work under the mentorship of a senior engineer.",
+    highlights: [
+      "Refactored a monolithic Express app into a modular service structure, cutting response latency by ~30%",
+      "Built an email-notification microservice using Nodemailer and BullMQ job queues",
+      "Wrote integration tests with Jest + Supertest, raising API test coverage from 12% to 68%",
+      "Participated in weekly sprint planning and code reviews following Agile practices",
+    ],
+    techStack: ["Node.js", "Express", "PostgreSQL", "BullMQ", "Jest", "Docker", "GitHub Actions"],
+    link: "",
+  },
+  // ── College Projects / Websites ────────────────────────────────────────────
+  {
+    id: "college-1",
+    role: "Joint Technical Head",
+    company: "CSI-PCE — Computer Society of India, Pillai College of Engineering",
+    type: "college" as const,
+    duration: "2024 – Present",
+    location: "New Panvel, Mumbai",
+    description:
+      "Leading the technical wing of CSI-PCE, the largest student body in the Mumbai chapter of the Computer Society of India. Responsible for end-to-end development of the society's online presence and event infrastructure.",
+    highlights: [
+      "Designed and developed the official CSI-PCE website serving 1,000+ students",
+      "Built an event-registration portal with Supabase Auth, reducing manual enrolment effort by 80%",
+      "Coordinated and conducted technical workshops on Node.js, SQL, and system design",
+      "Mentored 20+ junior developers within the society's tech team",
+    ],
+    techStack: ["Next.js", "Supabase", "TypeScript", "Tailwind CSS", "Vercel"],
+    link: "https://csipce.com",
+  },
+  {
+    id: "college-2",
+    role: "Backend Lead",
+    company: "Team Project — College Fest Portal",
+    type: "college" as const,
+    duration: "Dec 2023 – Feb 2024",
+    location: "Pillai College of Engineering",
+    description:
+      "Led the backend development for the annual college technical fest website used by 2,000+ participants across 30+ events. Managed a team of 4 developers and delivered the project 2 weeks ahead of schedule.",
+    highlights: [
+      "Built an event & team registration API handling concurrent submissions without race conditions",
+      "Implemented admin dashboard for real-time participant tracking and CSV export",
+      "Integrated Razorpay for online event fee collection with webhook reconciliation",
+      "Optimised database queries achieving sub-100ms average response time under load",
+    ],
+    techStack: ["Node.js", "Express", "MongoDB", "Razorpay", "React", "REST API"],
+    link: "",
+  },
+];
+

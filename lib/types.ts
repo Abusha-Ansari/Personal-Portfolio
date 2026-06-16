@@ -71,3 +71,17 @@ export interface GitHubStats {
   totalStars: number;
   topLanguages: { name: string; percentage: number }[];
 }
+
+// Experience item type (freelance / internship)
+export interface ExperienceItem {
+  id: string;
+  role: string;
+  company: string;
+  type: "freelance" | "internship" | "college";
+  duration: string;
+  location: string;
+  description: string;
+  highlights: string[];
+  techStack: string[];
+  link?: string;
+}
