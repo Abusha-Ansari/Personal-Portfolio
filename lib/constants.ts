@@ -17,15 +17,43 @@ export const SOCIAL_LINKS = [
 // Projects data — descriptions rewritten to emphasize backend aspects
 export const PROJECTS = [
   {
+    id: "project-6",
+    title: "DBnano",
+    description: "Designed and published an embedded NoSQL database implementing 6 core components including append-only storage, hash-based indexing, schema validation, in-memory caching, advanced query operators, and a fluent TypeScript query builder as a reusable npm package.",
+    tags: ["TypeScript", "Node.js", "NoSQL", "NPM"],
+    srcCode: "https://github.com/Abusha-Ansari/DBnano",
+    link: "https://www.npmjs.com/package/dbnanojs",
+    featured: true,
+    projectType: "backend" as const,
+  },
+  {
+    id: "project-8",
+    title: "DBnano Docs",
+    description: "A comprehensive documentation website for the DBnano embedded NoSQL database, featuring API references, getting started guides, and architecture overviews.",
+    tags: ["Nextra", "Next.js", "MDX", "Tailwind CSS"],
+    link: "https://docs.dbnano.abusha.in/",
+    featured: false,
+    projectType: "full-stack" as const,
+  },
+  {
     id: "project-1",
     title: "Mail Assist",
-    description: "A credit-based email platform with a robust backend powered by Supabase for auth, user management, and credit tracking. Integrates the Resend API for transactional email delivery, with server-side logic handling template rendering, rate limiting, and usage analytics.",
+    description: "Developed an email automation platform supporting anonymous messaging, reusable templates, email tracking, CSV-based batch email processing, and backend APIs integrating 3 core services for scalable email delivery.",
     image: "/projects/mailassist.jpg",
-    tags: ["Supabase", "Resend API", "Next.js", "TypeScript", "REST API", "Tailwind CSS"],
+    tags: ["Next.js", "Supabase", "Resend API", "TypeScript", "Tailwind CSS"],
     srcCode: "https://github.com/Abusha-Ansari/Mail-Assist",
     link: "https://mailassist.abusha.tech",
     featured: true,
     projectType: "full-stack" as const,
+  },
+  {
+    id: "project-7",
+    title: "Decentralized Healthcare",
+    description: "Built a federated learning platform for decentralized chest X-ray classification featuring 4 key modules: local model training, secure weight aggregation, REST APIs, and an administrative dashboard for real-time evaluation.",
+    tags: ["FastAPI", "PyTorch", "Python", "REST API"],
+    srcCode: "https://github.com/Abusha-Ansari/Decentralized-Healthcare",
+    featured: true,
+    projectType: "backend" as const,
   },
   {
     id: "project-5",
@@ -167,7 +195,7 @@ export const ARCHITECTURE_CONCEPTS = [
   {
     id: "db-design",
     title: "Database Architecture",
-    description: "Designing normalized schemas with proper indexing strategies, implementing connection pooling, and choosing the right database for each use case — SQL for relational data, NoSQL for flexibility.",
+    description: "Designing normalized schemas with proper indexing strategies, implementing connection pooling, and choosing the right database for each use case SQL for relational data, NoSQL for flexibility.",
     diagram: `graph TD
     App[Application] --> Pool[Connection Pool]
     Pool --> Primary[(Primary DB)]
@@ -253,7 +281,7 @@ export const EXPERIENCE = [
   // ── College Projects / Websites ────────────────────────────────────────────
   {
     id: "college-1",
-    role: "Joint Technical Head",
+    role: "Technical Head",
     company: "CSI-PCE — Computer Society of India, Pillai College of Engineering",
     type: "college" as const,
     duration: "2024 – Present",

@@ -16,10 +16,10 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  image: string;
+  image?: string;
   tags: string[];
-  srcCode: string;
-  link: string;
+  srcCode?: string;
+  link?: string;
   featured: boolean;
   projectType: "backend" | "full-stack";
 }

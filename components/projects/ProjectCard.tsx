@@ -123,25 +123,29 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
         {/* Card Footer */}
         <div className="flex items-center justify-between border-t border-border/60 mx-5 mt-4 py-4">
-          <Link
-            href={project.srcCode}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-150"
-          >
-            <GitHub className="h-4 w-4" />
-            <span>Source</span>
-          </Link>
+          {project.srcCode && (
+            <Link
+              href={project.srcCode}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-150"
+            >
+              <GitHub className="h-4 w-4" />
+              <span>Source</span>
+            </Link>
+          )}
 
-          <Link
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 rounded-lg bg-primary/10 px-3 py-1.5 text-sm font-semibold text-primary border border-primary/20 hover:bg-primary/20 hover:border-primary/40 transition-all duration-150"
-          >
-            <span>Live Demo</span>
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </Link>
+          {project.link && (
+            <Link
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 rounded-lg bg-primary/10 px-3 py-1.5 text-sm font-semibold text-primary border border-primary/20 hover:bg-primary/20 hover:border-primary/40 transition-all duration-150"
+            >
+              <span>Live Demo</span>
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
+          )}
         </div>
       </div>
     </motion.div>

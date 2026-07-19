@@ -69,7 +69,7 @@ export function Biography() {
             </p>
             
             <p>
-              I'm Joint Technical Head of CSI PCE — the Computer Society of India, and the largest student body in the Mumbai chapter. This role has sharpened my ability to architect technical solutions and lead development teams.
+              I'm Technical Head of CSI PCE the Computer Society of India, and the largest student body in the Mumbai chapter. This role has sharpened my ability to architect technical solutions and lead development teams.
             </p>
             
             <p>

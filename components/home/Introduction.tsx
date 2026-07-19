@@ -65,7 +65,7 @@ export function Introduction() {
               With over 2 years of experience in software development, I specialize in building robust backend systems, RESTful APIs, and database architectures. My focus is on writing clean, scalable server-side code that powers reliable applications.
             </p>
             <p className="text-muted-foreground">
-              I'm currently Joint Technical Head of CSI PCE — the Computer Society of India and the largest student body in the Mumbai chapter — where I lead the organization of technical events. I'm passionate about system design, API architecture, and building infrastructure that scales.
+              I'm currently Joint Technical Head of CSI PCE the Computer Society of India and the largest student body in the Mumbai chapter — where I lead the organization of technical events. I'm passionate about system design, API architecture, and building infrastructure that scales.
             </p>
           </motion.div>
 

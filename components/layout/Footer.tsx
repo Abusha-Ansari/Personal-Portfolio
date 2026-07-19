@@ -53,7 +53,7 @@ export function Footer() {
         >
           {/* Left Section */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-xl font-semibold font-mono">Abusha.dev</h3>
+            <h3 className="text-xl font-semibold font-mono">Abusha Ansari</h3>
             <p className="text-muted-foreground max-w-md">
               Backend developer specializing in APIs, databases, and scalable
               server-side architecture. Let's build reliable systems together.

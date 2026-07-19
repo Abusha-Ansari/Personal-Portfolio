@@ -75,7 +75,7 @@ export default function ExperiencePage() {
               className="max-w-2xl text-lg text-muted-foreground mb-12"
             >
               From freelance contracts and internships to leading tech teams at
-              college — a complete timeline of the engineering work that has
+              college a complete timeline of the engineering work that has
               shaped who I am as a developer.
             </motion.p>
 
