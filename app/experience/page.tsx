@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Laptop, GraduationCap, ArrowDown } from "lucide-react";
+import { Briefcase, GraduationCap, ArrowDown } from "lucide-react";
 import { ExperienceSection } from "@/components/home/ExperienceSection";
 import { EXPERIENCE } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
@@ -9,13 +9,6 @@ import { Container } from "@/components/ui/Container";
 // ─── Stats ────────────────────────────────────────────────────────────────────
 
 const stats = [
-  {
-    icon: <Laptop className="h-5 w-5" />,
-    value: EXPERIENCE.filter((e) => e.type === "freelance").length.toString() + "+",
-    label: "Freelance Projects",
-    color: "text-emerald-400",
-    bg: "bg-emerald-500/10 border-emerald-500/20",
-  },
   {
     icon: <Briefcase className="h-5 w-5" />,
     value: EXPERIENCE.filter((e) => e.type === "internship").length.toString(),
@@ -74,9 +67,9 @@ export default function ExperiencePage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="max-w-2xl text-lg text-muted-foreground mb-12"
             >
-              From freelance contracts and internships to leading tech teams at
-              college a complete timeline of the engineering work that has
-              shaped who I am as a developer.
+              From internships to leading tech initiatives at
+              college — a complete timeline of the engineering work and community
+              involvement that has shaped who I am as a developer.
             </motion.p>
 
             {/* Stats row */}

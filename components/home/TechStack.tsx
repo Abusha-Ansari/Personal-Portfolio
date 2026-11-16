@@ -11,21 +11,22 @@ import {
   GitBranch,
   Layers,
   Radio,
+  Code2,
 } from "lucide-react";
 
 const techItems = [
   { name: "Node.js", icon: <Server className="h-6 w-6" />, color: "text-green-500" },
-  { name: "Express", icon: <Zap className="h-6 w-6" />, color: "text-yellow-500" },
+  { name: "Express.js", icon: <Zap className="h-6 w-6" />, color: "text-yellow-500" },
+  { name: "FastAPI", icon: <Zap className="h-6 w-6" />, color: "text-teal-400" },
   { name: "PostgreSQL", icon: <Database className="h-6 w-6" />, color: "text-blue-400" },
   { name: "MongoDB", icon: <Database className="h-6 w-6" />, color: "text-green-400" },
-  { name: "Redis", icon: <Zap className="h-6 w-6" />, color: "text-red-400" },
-  { name: "Docker", icon: <Cloud className="h-6 w-6" />, color: "text-blue-500" },
-  { name: "GraphQL", icon: <Layers className="h-6 w-6" />, color: "text-pink-400" },
-  { name: "REST APIs", icon: <Shield className="h-6 w-6" />, color: "text-emerald-400" },
-  { name: "Socket.io", icon: <Radio className="h-6 w-6" />, color: "text-cyan-400" },
-  { name: "Git", icon: <GitBranch className="h-6 w-6" />, color: "text-orange-400" },
-  { name: "AWS", icon: <Cloud className="h-6 w-6" />, color: "text-amber-400" },
   { name: "Supabase", icon: <Database className="h-6 w-6" />, color: "text-emerald-500" },
+  { name: "TypeScript", icon: <Code2 className="h-6 w-6" />, color: "text-blue-500" },
+  { name: "Python", icon: <Code2 className="h-6 w-6" />, color: "text-yellow-400" },
+  { name: "Vercel AI SDK", icon: <Layers className="h-6 w-6" />, color: "text-pink-400" },
+  { name: "OpenAI API", icon: <Shield className="h-6 w-6" />, color: "text-cyan-400" },
+  { name: "AWS", icon: <Cloud className="h-6 w-6" />, color: "text-amber-400" },
+  { name: "Vercel", icon: <Cloud className="h-6 w-6" />, color: "text-white" },
 ];
 
 export function TechStack() {
@@ -39,9 +40,9 @@ export function TechStack() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Backend Tech Stack</h2>
+          <h2 className="text-3xl font-bold mb-4">Tech Stack</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            The technologies I use daily to build scalable, reliable server-side applications.
+            The technologies and tools I use to build scalable, production-ready applications.
           </p>
         </motion.div>
 

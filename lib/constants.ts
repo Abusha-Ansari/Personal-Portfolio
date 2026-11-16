@@ -17,6 +17,15 @@ export const SOCIAL_LINKS = [
 // Projects data — descriptions rewritten to emphasize backend aspects
 export const PROJECTS = [
   {
+    id: "project-9",
+    title: "AI API Generator",
+    description: "An AI-powered developer platform that transforms OpenAPI 3.x specifications into 5+ development artifacts including TypeScript SDKs, API documentation, unit tests, Postman collections, and request examples — with streaming AI responses and multi-provider LLM support.",
+    tags: ["Next.js", "TypeScript", "Node.js", "Vercel AI SDK", "OpenAI API"],
+    srcCode: "https://github.com/Abusha-Ansari",
+    featured: true,
+    projectType: "full-stack" as const,
+  },
+  {
     id: "project-6",
     title: "DBnano",
     description: "Designed and published an embedded NoSQL database implementing 6 core components including append-only storage, hash-based indexing, schema validation, in-memory caching, advanced query operators, and a fluent TypeScript query builder as a reusable npm package.",
@@ -107,40 +116,45 @@ export const SKILLS = [
     category: "Backend & APIs",
     items: [
       { name: "Node.js", level: 85 },
-      { name: "Express", level: 85 },
+      { name: "Express.js", level: 85 },
+      { name: "FastAPI", level: 75 },
       { name: "REST APIs", level: 90 },
       { name: "GraphQL", level: 70 },
-      { name: "Socket.io", level: 75 },
-      { name: "WebRTC", level: 65 },
+      { name: "WebSockets", level: 75 },
     ],
   },
   {
-    category: "Databases",
+    category: "Databases & AI",
     items: [
       { name: "PostgreSQL", level: 80 },
-      { name: "MongoDB", level: 85 },
-      { name: "Redis", level: 60 },
-      { name: "Supabase", level: 75 },
+      { name: "MongoDB", level: 80 },
+      { name: "Supabase", level: 80 },
+      { name: "Firebase", level: 65 },
+      { name: "Vercel AI SDK", level: 75 },
+      { name: "OpenAI API", level: 75 },
+      { name: "Prompt Engineering", level: 70 },
     ],
   },
   {
-    category: "DevOps & Cloud",
+    category: "Languages",
     items: [
-      { name: "Docker", level: 65 },
-      { name: "AWS", level: 50 },
-      { name: "Git", level: 80 },
-      { name: "CI/CD", level: 55 },
-      { name: "Linux", level: 60 },
+      { name: "TypeScript", level: 85 },
+      { name: "JavaScript", level: 90 },
+      { name: "Python", level: 75 },
+      { name: "C++", level: 65 },
+      { name: "Java", level: 60 },
     ],
   },
   {
-    category: "Frontend",
+    category: "Cloud & Tools",
     items: [
-      { name: "React", level: 90 },
-      { name: "Next.js", level: 75 },
-      { name: "TypeScript", level: 80 },
-      { name: "Tailwind CSS", level: 80 },
-      { name: "JavaScript", level: 95 },
+      { name: "AWS", level: 55 },
+      { name: "GCP", level: 50 },
+      { name: "Vercel", level: 80 },
+      { name: "Railway", level: 70 },
+      { name: "Git", level: 85 },
+      { name: "GitHub", level: 85 },
+      { name: "Postman", level: 80 },
     ],
   },
 ];
@@ -222,98 +236,43 @@ export const ARCHITECTURE_CONCEPTS = [
 
 // Experience data — freelance, internship, and college project involvement
 export const EXPERIENCE = [
-  // ── Freelance ──────────────────────────────────────────────────────────────
-  {
-    id: "fl-1",
-    role: "Freelance Full-Stack Developer",
-    company: "Independent Client — E-Commerce Platform",
-    type: "freelance" as const,
-    duration: "Oct 2024 – Jan 2025",
-    location: "Remote",
-    description:
-      "Designed and delivered a complete multi-vendor e-commerce backend for an independent client. Handled everything from initial schema design to deployment, including product catalog APIs, order workflows, and Stripe payment integration.",
-    highlights: [
-      "Built a RESTful API handling 10+ resource types with full CRUD and role-based access control",
-      "Integrated Stripe Checkout and webhook handling for order fulfilment automation",
-      "Modelled a PostgreSQL schema with 15+ relational tables, optimised with composite indices",
-      "Deployed on Railway with auto-deploy pipelines from GitHub",
-    ],
-    techStack: ["Node.js", "Express", "PostgreSQL", "Supabase", "Stripe API", "TypeScript", "Docker"],
-    link: "",
-  },
-  {
-    id: "fl-2",
-    role: "Freelance Backend Developer",
-    company: "Independent Client — SaaS Dashboard",
-    type: "freelance" as const,
-    duration: "Mar 2025 – May 2025",
-    location: "Remote",
-    description:
-      "Built the backend API and real-time notification layer for a SaaS analytics dashboard. Implemented WebSocket-based live updates, JWT authentication, and a tenant-aware data model.",
-    highlights: [
-      "Architected a multi-tenant data model ensuring strict data isolation between tenants",
-      "Implemented Socket.io rooms for per-tenant live analytics pushes",
-      "Designed a JWT + refresh-token auth flow with Redis-backed session blacklisting",
-      "Wrote OpenAPI 3.0 documentation for all 30+ endpoints",
-    ],
-    techStack: ["Node.js", "Express", "MongoDB", "Redis", "Socket.io", "JWT", "TypeScript"],
-    link: "",
-  },
   // ── Internship ─────────────────────────────────────────────────────────────
   {
     id: "intern-1",
     role: "Backend Developer Intern",
-    company: "TechVenture Startup (Mumbai)",
+    company: "UTSAVY",
     type: "internship" as const,
-    duration: "Jun 2024 – Sep 2024",
-    location: "Mumbai, India (Hybrid)",
+    duration: "Dec 2025 – Feb 2026",
+    location: "Remote",
     description:
-      "Joined a three-person engineering team at an early-stage startup to build backend infrastructure for their B2B SaaS product. Owned the API layer and database work under the mentorship of a senior engineer.",
+      "Joined UTSAVY as a Backend Developer Intern, contributing to both frontend and backend development of a digital invitation platform. Worked across the full stack with React, Supabase, and Vercel.",
     highlights: [
-      "Refactored a monolithic Express app into a modular service structure, cutting response latency by ~30%",
-      "Built an email-notification microservice using Nodemailer and BullMQ job queues",
-      "Wrote integration tests with Jest + Supertest, raising API test coverage from 12% to 68%",
-      "Participated in weekly sprint planning and code reviews following Agile practices",
+      "Developed and integrated 10+ responsive digital invitation templates, enhancing platform customization and user experience",
+      "Built frontend features and UI improvements using React, leveraging AI-assisted development tools such as Lovable while manually implementing application logic and backend integrations",
+      "Contributed to backend development using Supabase, including database integration, API interactions, and feature implementation for production deployments on Vercel",
+      "Collaborated on implementing custom domain (DNS) mapping for invitation websites, researching and testing the infrastructure required to support user-owned domains",
     ],
-    techStack: ["Node.js", "Express", "PostgreSQL", "BullMQ", "Jest", "Docker", "GitHub Actions"],
+    techStack: ["React", "TypeScript", "Supabase", "Vercel"],
     link: "",
   },
-  // ── College Projects / Websites ────────────────────────────────────────────
+  // ── College Projects / Clubs ────────────────────────────────────────────
   {
     id: "college-1",
-    role: "Technical Head",
+    role: "Head of Technical Student Chapter",
     company: "CSI-PCE — Computer Society of India, Pillai College of Engineering",
     type: "college" as const,
     duration: "2024 – Present",
     location: "New Panvel, Mumbai",
     description:
-      "Leading the technical wing of CSI-PCE, the largest student body in the Mumbai chapter of the Computer Society of India. Responsible for end-to-end development of the society's online presence and event infrastructure.",
+      "Leading the technical wing of CSI-PCE, the largest student body in the Mumbai chapter of the Computer Society of India. Responsible for driving technical initiatives, organizing events, and conducting workshops for 200+ students.",
     highlights: [
-      "Designed and developed the official CSI-PCE website serving 1,000+ students",
-      "Built an event-registration portal with Supabase Auth, reducing manual enrolment effort by 80%",
-      "Coordinated and conducted technical workshops on Node.js, SQL, and system design",
-      "Mentored 20+ junior developers within the society's tech team",
+      "Leading 8+ technical initiatives and organizing 6+ technical events for the chapter",
+      "Delivered 4+ workshops on Vibe Coding, Full-Stack JavaScript Development, and Competitive Programming for 200+ students",
+      "Secured Top-10 position in Hack to Crack 1.0 among 50+ participating teams",
+      "Selected for the SIH 2024 Waitlist after progressing through internal college selection among 200+ teams",
     ],
     techStack: ["Next.js", "Supabase", "TypeScript", "Tailwind CSS", "Vercel"],
     link: "https://csipce.com",
-  },
-  {
-    id: "college-2",
-    role: "Backend Lead",
-    company: "Team Project — College Fest Portal",
-    type: "college" as const,
-    duration: "Dec 2023 – Feb 2024",
-    location: "Pillai College of Engineering",
-    description:
-      "Led the backend development for the annual college technical fest website used by 2,000+ participants across 30+ events. Managed a team of 4 developers and delivered the project 2 weeks ahead of schedule.",
-    highlights: [
-      "Built an event & team registration API handling concurrent submissions without race conditions",
-      "Implemented admin dashboard for real-time participant tracking and CSV export",
-      "Integrated Razorpay for online event fee collection with webhook reconciliation",
-      "Optimised database queries achieving sub-100ms average response time under load",
-    ],
-    techStack: ["Node.js", "Express", "MongoDB", "Razorpay", "React", "REST API"],
-    link: "",
   },
 ];
 

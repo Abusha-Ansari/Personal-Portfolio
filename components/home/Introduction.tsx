@@ -8,9 +8,9 @@ import { Server, Database, Cloud, Code2 } from "lucide-react";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Backend & APIs": <Server className="h-4 w-4" />,
-  "Databases": <Database className="h-4 w-4" />,
-  "DevOps & Cloud": <Cloud className="h-4 w-4" />,
-  "Frontend": <Code2 className="h-4 w-4" />,
+  "Databases & AI": <Database className="h-4 w-4" />,
+  "Languages": <Code2 className="h-4 w-4" />,
+  "Cloud & Tools": <Cloud className="h-4 w-4" />,
 };
 
 export function Introduction() {
@@ -62,10 +62,10 @@ export function Introduction() {
           <motion.div variants={itemVariants}>
             <h2 className="text-3xl font-bold mb-4">About Me</h2>
             <p className="text-muted-foreground mb-6">
-              With over 2 years of experience in software development, I specialize in building robust backend systems, RESTful APIs, and database architectures. My focus is on writing clean, scalable server-side code that powers reliable applications.
+              I&apos;m a developer building scalable backend systems, AI-powered tools, and full-stack web applications. With hands-on experience in Node.js, FastAPI, Supabase, TypeScript, and AI APIs, I focus on writing clean, production-ready code.
             </p>
             <p className="text-muted-foreground">
-              I'm currently Joint Technical Head of CSI PCE the Computer Society of India and the largest student body in the Mumbai chapter — where I lead the organization of technical events. I'm passionate about system design, API architecture, and building infrastructure that scales.
+              I&apos;m Head of Technical Student Chapter at CSI-PCE — the Computer Society of India — where I lead technical initiatives and workshops for 200+ students. I&apos;m passionate about AI-integrated backend engineering and building tools that developers actually love.
             </p>
           </motion.div>
 

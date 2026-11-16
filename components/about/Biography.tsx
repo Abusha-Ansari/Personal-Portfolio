@@ -40,12 +40,12 @@ export function Biography() {
             <BiographyCard
               icon={<Calendar className="h-5 w-5 text-primary" />}
               title="Experience"
-              content="2+ Years"
+              content="1+ Year"
             />
             <BiographyCard
               icon={<Award className="h-5 w-5 text-primary" />}
               title="Education"
-              content="Btech Degree"
+              content="B.Tech — PCE, 2027"
             />
           </div>
         </motion.div>
@@ -61,23 +61,23 @@ export function Biography() {
           
           <div className="space-y-4 text-muted-foreground">
             <p>
-              Hello! I'm Abusha Ansari, a backend-focused developer with over 2 years of experience in building server-side applications, APIs, and database systems that power real-world products.
+              Hello! I&apos;m Abusha Ansari, a developer focused on building scalable backend systems, AI-powered applications, and full-stack web products that solve real problems.
             </p>
             
             <p>
-              My journey in tech began during my undergraduate studies at Pillai College of Engineering, where I discovered my passion for system design and building the infrastructure that powers applications. Since then, I've dived deep into Node.js, Express, PostgreSQL, MongoDB, and cloud services.
+              I&apos;m currently pursuing my B.Tech in Electronics &amp; Computer Engineering at Pillai College of Engineering (2023–2027), where I&apos;ve been deeply involved in the tech community as the Head of Technical Student Chapter at CSI-PCE — leading 8+ initiatives and organizing 6+ technical events for 200+ students.
             </p>
             
             <p>
-              I'm Technical Head of CSI PCE the Computer Society of India, and the largest student body in the Mumbai chapter. This role has sharpened my ability to architect technical solutions and lead development teams.
+              My professional experience includes a Backend Developer Internship at UTSAVY (Dec 2025 – Feb 2026), where I built responsive digital invitation templates, contributed to Supabase-powered backend integrations, and collaborated on custom domain (DNS) mapping infrastructure for a production platform.
             </p>
             
             <p>
-              My technical expertise includes designing RESTful APIs, database schema architecture, GraphQL, real-time communication with Socket.io and WebRTC, and deploying with Docker and cloud infrastructure. I believe the best backend code is the code that's reliable, well-tested, and invisible to the end user.
+              My technical toolkit spans TypeScript, Python, Node.js, FastAPI, PostgreSQL, MongoDB, Supabase, Vercel AI SDK, and OpenAI API. I love building things at the intersection of AI and backend engineering — from embedded NoSQL databases to AI-powered developer tools.
             </p>
             
             <p>
-              When I'm not coding, you can find me chilling with my friends, reading about distributed systems, or experimenting with new recipes in the kitchen.
+              When I&apos;m not coding, you can find me organizing tech workshops, participating in hackathons, or experimenting with new tools and ideas.
             </p>
           </div>
         </motion.div>
