@@ -11,6 +11,21 @@ const nextConfig = {
         destination: 'https://meet.google.com/rtb-muoq-vjh',
         permanent: true,
       },
+      {
+        source: '/insta',
+        destination: 'https://www.instagram.com/abusha_2103',
+        permanent: true,
+      },
+      {
+        source: '/github',
+        destination: 'https://www.github.com/Abusha-Ansari',
+        permanent: true,
+      },
+      {
+        source: '/linkedin',
+        destination: 'https://www.linkedin.com/in/abusha-ansari',
+        permanent: true,
+      }
     ];
   },
 };

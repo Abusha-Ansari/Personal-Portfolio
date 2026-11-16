@@ -253,7 +253,7 @@ export const EXPERIENCE = [
       "Architected a full-stack application with a Next.js frontend, Node.js/Express REST API, and PostgreSQL/Supabase backend with relational data modelling for properties, consultants, and products",
     ],
     techStack: ["Next.js", "Node.js", "Express", "PostgreSQL", "Supabase", "OpenAI API", "TypeScript"],
-    link: "",
+    link: "https://vastu1-tau.vercel.app",
   },
   // ── Internship ─────────────────────────────────────────────────────────────
   {
@@ -291,7 +291,7 @@ export const EXPERIENCE = [
       "Selected for the SIH 2024 Waitlist after progressing through internal college selection among 200+ teams",
     ],
     techStack: ["Next.js", "Supabase", "TypeScript", "Tailwind CSS", "Vercel"],
-    link: "https://csipce.com",
+    link: "https://csi.pce.ac.in",
   },
 ];
 
