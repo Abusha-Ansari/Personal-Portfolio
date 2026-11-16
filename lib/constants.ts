@@ -236,6 +236,25 @@ export const ARCHITECTURE_CONCEPTS = [
 
 // Experience data — freelance, internship, and college project involvement
 export const EXPERIENCE = [
+  // ── Freelance ──────────────────────────────────────────────────────────────
+  {
+    id: "fl-1",
+    role: "Freelance Full-Stack Developer",
+    company: "Independent Client — Vastu (Real Estate Platform)",
+    type: "freelance" as const,
+    duration: "Feb 2026 – Mar 2026",
+    location: "Remote",
+    description:
+      "Designed and built Vastu — an AI-powered real estate platform that recommends properties based on Vastu Shastra principles derived from Hindu Vedic texts. The platform combines intelligent property matching, curated consultant listings, and an AI-filtered marketplace for Vastu-approved products.",
+    highlights: [
+      "Built an AI-powered property recommendation engine that scores and matches homes against Vastu Shastra guidelines using the OpenAI API",
+      "Developed a Vastu guides and consultants directory with profile pages, filtering, and booking inquiry flows",
+      "Implemented an AI-filtered product marketplace surfacing Vastu-approved items using semantic search and category classification",
+      "Architected a full-stack application with a Next.js frontend, Node.js/Express REST API, and PostgreSQL/Supabase backend with relational data modelling for properties, consultants, and products",
+    ],
+    techStack: ["Next.js", "Node.js", "Express", "PostgreSQL", "Supabase", "OpenAI API", "TypeScript"],
+    link: "",
+  },
   // ── Internship ─────────────────────────────────────────────────────────────
   {
     id: "intern-1",
